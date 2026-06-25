@@ -55,7 +55,7 @@ app.post("/messages", async (req, res) => {
     return;
   }
 
-  await transport.handlePostMessage(req, res);
+  await transport.handlePostMessage(req, res, req.body);
 });
 
 // Newer MCP clients connect here (Streamable HTTP transport)
